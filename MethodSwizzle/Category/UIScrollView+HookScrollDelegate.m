@@ -42,7 +42,7 @@
     
     // 判断是否是TableView  给tableView添加
     if ([NSStringFromClass([self class]) isEqualToString:@"UITableView"]) {
-        if ([HookUtility isContainSel:CUSTOM_CLASS_SEL([delegate class], @selector(tableView:didSelectRowAtIndexPath:)) inClass:[delegate class]]) {
+        if (![HookUtility isContainSel:CUSTOM_CLASS_SEL([delegate class], @selector(tableView:didSelectRowAtIndexPath:)) inClass:[delegate class]]) {
             [(UITableView *)self swizzle_tableViewDidSelectedAtIndexpath:delegate];
         }
     }

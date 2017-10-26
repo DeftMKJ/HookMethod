@@ -25,7 +25,7 @@
     
     // 用objc_allocateClassPair创建一个自定义名字的元类
     Class class = objc_allocateClassPair(NSClassFromString(@"NSObject"), "UnrecognizedSel", 0);
-    
+
     // 类添加方法 Sel 和 Imp
     class_addMethod(class, aSelector, class_getMethodImplementation([self class], @selector(customMethod)), "v@:");
 //    class_addIvar(<#Class  _Nullable __unsafe_unretained cls#>, <#const char * _Nonnull name#>, <#size_t size#>, <#uint8_t alignment#>, <#const char * _Nullable types#>)

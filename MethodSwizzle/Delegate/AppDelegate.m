@@ -14,6 +14,7 @@
 #import "UIControl+HookTouchAction.h"
 #import "UIView+HookGestureTap.h"
 #import "UIScrollView+HookScrollDelegate.h"
+#import "UITableView+HookTableViewDelegate.h"
 
 @interface AppDelegate ()
 
@@ -31,6 +32,7 @@
     [UIControl mkjhood_touchActionOpen];
 //    [UIView mkjHook_GestureOpen]; 手势View的点击会触发太多东西，有待研究
     [UIScrollView mkjHook_ScrollViewDelegateOpen];
+    
     [self collectionCrash];
     
     

@@ -31,8 +31,7 @@ void handleExceptions(NSException *exception) {
 }
 
 void signalHandler(int sig) {
-    //最好不要写，可能会打印太多内容
-//    NSLog(@"signal = %d", sig);
+
 }
 
 @end

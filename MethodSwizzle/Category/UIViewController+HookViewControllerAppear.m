@@ -20,6 +20,7 @@
 
 
 - (void)mkj_viewDidAppear{
+    // 在这里可以进行数据的上报
     NSLog(@"hook Viewcontroller viewdidAppear---- class:%@",NSStringFromClass([self class]));
     [self mkj_viewDidAppear];
 }
